@@ -258,7 +258,8 @@
               <stringProp name="cacheKey">true</stringProp>
               <stringProp name="filename"></stringProp>
               <stringProp name="parameters"></stringProp>
-              <stringProp name="script">def token = vars.get(&quot;authenticityToken&quot;)
+              <stringProp name="script">// Replace symbols in token
+def token = vars.get(&quot;authenticityToken&quot;)
 log.info(&quot;Current token:&quot; + token)
 def tokenUpdate = token.replace(&quot;%2F&quot;,&quot;/&quot;)
 vars.put(&quot;authenticityToken&quot;, tokenUpdate)
@@ -267,16 +268,6 @@ log.info(&quot;Replaced token:&quot; + tokenUpdate)
 </stringProp>
               <stringProp name="scriptLanguage">groovy</stringProp>
             </JSR223PreProcessor>
-            <hashTree/>
-            <HtmlExtractor guiclass="HtmlExtractorGui" testclass="HtmlExtractor" testname="CSS Selector Extractor: maxValue" enabled="true">
-              <stringProp name="HtmlExtractor.refname">maxValue</stringProp>
-              <stringProp name="HtmlExtractor.expr">option[value]</stringProp>
-              <stringProp name="HtmlExtractor.attribute"></stringProp>
-              <stringProp name="HtmlExtractor.default">ErrorText</stringProp>
-              <boolProp name="HtmlExtractor.default_empty_value">false</boolProp>
-              <stringProp name="HtmlExtractor.match_number">0</stringProp>
-              <stringProp name="HtmlExtractor.extractor_impl"></stringProp>
-            </HtmlExtractor>
             <hashTree/>
           </hashTree>
         </hashTree>
@@ -352,7 +343,8 @@ log.info(&quot;Replaced token:&quot; + tokenUpdate)
               <stringProp name="cacheKey">true</stringProp>
               <stringProp name="filename"></stringProp>
               <stringProp name="parameters"></stringProp>
-              <stringProp name="script">def stepId = vars.get(&quot;stepId2&quot;)
+              <stringProp name="script">// Only for logging
+def stepId = vars.get(&quot;stepId2&quot;)
 log.info(&quot;Current stepId_2:&quot; + stepId)
 </stringProp>
               <stringProp name="scriptLanguage">groovy</stringProp>
