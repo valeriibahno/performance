@@ -87,6 +87,61 @@
               <stringProp name="Argument.value">&quot;I AM ROBOT&quot;</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
+            <elementProp name="maxOrder" elementType="Argument">
+              <stringProp name="Argument.name">maxOrder</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="challengerOrder1" elementType="Argument">
+              <stringProp name="Argument.name">challengerOrder1</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="challengerOrder2" elementType="Argument">
+              <stringProp name="Argument.name">challengerOrder2</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="challengerOrder3" elementType="Argument">
+              <stringProp name="Argument.name">challengerOrder3</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="challengerOrder4" elementType="Argument">
+              <stringProp name="Argument.name">challengerOrder4</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="challengerOrder5" elementType="Argument">
+              <stringProp name="Argument.name">challengerOrder5</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="challengerOrder6" elementType="Argument">
+              <stringProp name="Argument.name">challengerOrder6</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="challengerOrder7" elementType="Argument">
+              <stringProp name="Argument.name">challengerOrder7</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="challengerOrder8" elementType="Argument">
+              <stringProp name="Argument.name">challengerOrder8</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="challengerOrder9" elementType="Argument">
+              <stringProp name="Argument.name">challengerOrder9</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="challengerOrder10" elementType="Argument">
+              <stringProp name="Argument.name">challengerOrder10</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
           </collectionProp>
         </Arguments>
         <hashTree/>
@@ -101,6 +156,12 @@
           <boolProp name="stopThread">false</boolProp>
           <stringProp name="variableNames">age</stringProp>
         </CSVDataSet>
+        <hashTree/>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+          <collectionProp name="CookieManager.cookies"/>
+          <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+          <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+        </CookieManager>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Open MainPage" enabled="true">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
@@ -254,21 +315,6 @@
               <stringProp name="HtmlExtractor.extractor_impl"></stringProp>
             </HtmlExtractor>
             <hashTree/>
-            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor: token" enabled="true">
-              <stringProp name="cacheKey">true</stringProp>
-              <stringProp name="filename"></stringProp>
-              <stringProp name="parameters"></stringProp>
-              <stringProp name="script">// Replace symbols in token
-def token = vars.get(&quot;authenticityToken&quot;)
-log.info(&quot;Current token:&quot; + token)
-def tokenUpdate = token.replace(&quot;%2F&quot;,&quot;/&quot;)
-vars.put(&quot;authenticityToken&quot;, tokenUpdate)
-
-log.info(&quot;Replaced token:&quot; + tokenUpdate)
-</stringProp>
-              <stringProp name="scriptLanguage">groovy</stringProp>
-            </JSR223PreProcessor>
-            <hashTree/>
           </hashTree>
         </hashTree>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Select your age" enabled="true">
@@ -315,7 +361,7 @@ log.info(&quot;Replaced token:&quot; + tokenUpdate)
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
                 <elementProp name="commit" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">commit</stringProp>
                   <stringProp name="Argument.value">Next</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
@@ -336,7 +382,6 @@ log.info(&quot;Replaced token:&quot; + tokenUpdate)
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
             <stringProp name="HTTPSampler.connect_timeout"></stringProp>
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
-            <stringProp name="TestPlan.comments">Detected the start of a redirect chain</stringProp>
           </HTTPSamplerProxy>
           <hashTree>
             <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor: print stepId2" enabled="true">
@@ -345,7 +390,7 @@ log.info(&quot;Replaced token:&quot; + tokenUpdate)
               <stringProp name="parameters"></stringProp>
               <stringProp name="script">// Only for logging
 def stepId = vars.get(&quot;stepId2&quot;)
-log.info(&quot;Current stepId_2:&quot; + stepId)
+log.info(&quot;Current stepId_2: &quot; + stepId)
 </stringProp>
               <stringProp name="scriptLanguage">groovy</stringProp>
             </JSR223PreProcessor>
@@ -479,25 +524,50 @@ log.info(&quot;Current stepId_2:&quot; + stepId)
               <stringProp name="HtmlExtractor.extractor_impl"></stringProp>
             </HtmlExtractor>
             <hashTree/>
-            <HtmlExtractor guiclass="HtmlExtractorGui" testclass="HtmlExtractor" testname="CSS Selector Extractor: orders" enabled="true">
-              <stringProp name="HtmlExtractor.refname">orders</stringProp>
-              <stringProp name="HtmlExtractor.expr">label[class=&quot;collection_radio_buttons&quot;]</stringProp>
-              <stringProp name="HtmlExtractor.attribute"></stringProp>
-              <stringProp name="HtmlExtractor.default">Orders_error</stringProp>
-              <boolProp name="HtmlExtractor.default_empty_value">false</boolProp>
-              <stringProp name="HtmlExtractor.match_number">0</stringProp>
-              <stringProp name="HtmlExtractor.extractor_impl"></stringProp>
-            </HtmlExtractor>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RegExp Extr: allOrdersArray" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">allOrdersArray</stringProp>
+              <stringProp name="RegexExtractor.regex">&lt;label class=&quot;collection_radio_buttons&quot; for=&quot;challenger_order_selected_.*&quot;&gt;(.*)&lt;\/label&gt;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number">-1</stringProp>
+            </RegexExtractor>
             <hashTree/>
-            <HtmlExtractor guiclass="HtmlExtractorGui" testclass="HtmlExtractor" testname="CSS Selector Extractor: ordersValue" enabled="true">
-              <stringProp name="HtmlExtractor.refname">ordersValue</stringProp>
-              <stringProp name="HtmlExtractor.expr">input[name=&quot;challenger[order_selected]&quot;]</stringProp>
-              <stringProp name="HtmlExtractor.attribute">value</stringProp>
-              <stringProp name="HtmlExtractor.default">Error_ordersValue</stringProp>
-              <boolProp name="HtmlExtractor.default_empty_value">false</boolProp>
-              <stringProp name="HtmlExtractor.match_number">0</stringProp>
-              <stringProp name="HtmlExtractor.extractor_impl"></stringProp>
-            </HtmlExtractor>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor: find and set maxOrder" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">def allOrdersArraySize = vars.get(&quot;allOrdersArray_matchNr&quot;) as Integer
+log.info(&quot;allOrdersArraySize: &quot; + allOrdersArraySize)
+
+// Get max of orders
+def listOrders = []
+for(int i=1; allOrdersArraySize &gt;= i; i++) {
+	listOrders.add(vars.get(&apos;allOrdersArray_&apos; + i + &apos;_g1&apos;) as Integer)
+}
+log.info(&quot;listOrders - max: &quot; + listOrders.max())
+vars.put(&quot;maxOrder&quot;, listOrders.max() as String)</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+            <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="XPath Extractor: maxOrderValue2" enabled="false">
+              <stringProp name="XPathExtractor.default"></stringProp>
+              <stringProp name="XPathExtractor.refname">maxOrderValue2</stringProp>
+              <stringProp name="XPathExtractor.matchNumber">-1</stringProp>
+              <stringProp name="XPathExtractor.xpathQuery">//input[@name=&quot;challenger[order_selected]&quot;]/following-sibling::label[text()=${maxOrder}]</stringProp>
+              <boolProp name="XPathExtractor.validate">false</boolProp>
+              <boolProp name="XPathExtractor.tolerant">true</boolProp>
+              <boolProp name="XPathExtractor.namespace">false</boolProp>
+            </XPathExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RegExp Extr: maxOrderValue" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">maxOrderValue</stringProp>
+              <stringProp name="RegexExtractor.regex">&lt;input class=&quot;radio_buttons optional&quot; id=&quot;challenger_order_selected_.*&quot; name=&quot;challenger\[order_selected\]&quot; type=&quot;radio&quot; value=&quot;(.*)&quot; \/&gt;&lt;label class=&quot;collection_radio_buttons&quot; .*&gt;${maxOrder}&lt;\/label&gt;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
             <hashTree/>
           </hashTree>
         </hashTree>
@@ -540,14 +610,14 @@ log.info(&quot;Current stepId_2:&quot; + stepId)
                 <elementProp name="challenger[largest_order]" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">challenger[largest_order]</stringProp>
-                  <stringProp name="Argument.value">${orders}</stringProp>
+                  <stringProp name="Argument.value">${maxOrder}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
                 <elementProp name="challenger[order_selected]" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">challenger[order_selected]</stringProp>
-                  <stringProp name="Argument.value">${ordersValue}</stringProp>
+                  <stringProp name="Argument.value">${maxOrderValue}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
@@ -580,29 +650,75 @@ log.info(&quot;Current stepId_2:&quot; + stepId)
               <stringProp name="cacheKey">true</stringProp>
               <stringProp name="filename"></stringProp>
               <stringProp name="parameters"></stringProp>
-              <stringProp name="script">// Only for logging
+              <stringProp name="script">//// Only for logging
+//def allOrdersArray = vars.get(&quot;allOrdersArray&quot;)
+//log.info(&quot;allOrdersArray: &quot; + allOrdersArray)
+
+
+//def allOrdersArraySize = vars.get(&quot;allOrdersArray_matchNr&quot;)
+//log.info(&quot;allOrdersArraySize: &quot; + allOrdersArraySize)
+//
+//// Get max of orders
+//def listOrders = []
+//for(int i=1; allOrdersArraySize &gt;= i; i++) {
+//	listOrders.add(vars.get(&apos;allOrdersArray_&apos; + i + &apos;_g1&apos;) as Integer)
+//}
+//log.info(&quot;listOrders - max: &quot; + listOrders.max())
+//vars.put(&quot;maxOrder&quot;, listOrders.max() as String)
+
+//def maxOrderValue2 = vars.get(&quot;maxOrderValue2&quot;)
+//log.info(&quot;maxOrderValue2: &quot; + maxOrderValue2)
+
+
+
+def maxOrderValue = vars.get(&quot;maxOrderValue&quot;)
+log.info(&quot;maxOrderValue: &quot; + maxOrderValue)
+vars.put(&quot;maxOrderValue&quot;, maxOrderValue as String)
+
+//def listInt = []
+//for(String s : allOrdersArray)
+//	listInt.add(Integer.valueOf(s))
+//log.info(&quot;listInt orders: &quot; + listInt)
+
+//// Get max of orders
+//def maxOrder = listOrders.max()
+//log.info(&quot;max order: &quot; + maxOrder)
+////vars.put(&quot;orders&quot;, maxOrder)
+
+
+//// Only for logging - listOrderValue
+//def listOrderValue = vars.get(&quot;listOrderValue&quot;)
+//log.info(&quot;listOrderValue: &quot; + listOrderValue)
+
+// Only for logging
 def stepId = vars.get(&quot;stepId3&quot;)
-log.info(&quot;Current stepId_3:&quot; + stepId)
+log.info(&quot;Current stepId_3: &quot; + stepId)
 
-// Get list of orders
-def listOrders = vars.get(&quot;orders&quot;)
-log.info(&quot;list orders:&quot; + listOrders)
+//// Get list of orders
+//def orders = vars.get(&quot;orders&quot;)
+//log.info(&quot;list orders: &quot; + orders)
+//
+//def listInt = []
+//for(String s : listOrders)
+//	listInt.add(Integer.valueOf(s))
+//log.info(&quot;List: &quot; + listInt)
+//
+//// Get max of orders
+//def maxOrder = listInt.max()
+//log.info(&quot;max order: &quot; + maxOrder)
+////vars.put(&quot;orders&quot;, maxOrder)		// prev
 
-def listInt = []
-for(String s : listOrders)
-	listInt.add(Integer.valueOf(s))
-log.info(&quot;List:&quot; + listInt)
-
-// Get max of orders
-def maxOrder = listInt.max()
-log.info(&quot;max order:&quot; + maxOrder)
-vars.put(&quot;orders&quot;, maxOrder)
+//vars.put(&quot;orders&quot;, listOrders)
+//vars.put(&quot;orders&quot;, allOrdersArray)
 
 // Get list of order_values and find order_value for max order
-def listOrdersValue = vars.get(&quot;ordersValue&quot;)
-def orderValue = listOrdersValue.find { it == maxOrder.toString() }
-log.info(&quot;Orders value:&quot; + orderValue)
-vars.put(&quot;ordersValue&quot;, orderValue)</stringProp>
+//def listOrdersValue = vars.get(&quot;ordersValue&quot;)
+//log.info(&quot;listOrdersValue: &quot; + listOrdersValue)
+//def orderValue = listOrdersValue.find { it == maxOrder }
+//log.info(&quot;Orders value: &quot; + orderValue)
+//vars.put(&quot;ordersValue&quot;, orderValue)
+
+//vars.put(&quot;ordersValue&quot;, listOrdersValue)</stringProp>
               <stringProp name="scriptLanguage">groovy</stringProp>
             </JSR223PreProcessor>
             <hashTree/>
@@ -734,6 +850,65 @@ vars.put(&quot;ordersValue&quot;, orderValue)</stringProp>
               <stringProp name="HtmlExtractor.extractor_impl"></stringProp>
             </HtmlExtractor>
             <hashTree/>
+            <HtmlExtractor guiclass="HtmlExtractorGui" testclass="HtmlExtractor" testname="CSS Selector Extractor: challengerOrderId" enabled="true">
+              <stringProp name="HtmlExtractor.refname">challengerOrderId</stringProp>
+              <stringProp name="HtmlExtractor.expr">form[id=&quot;new_challenger&quot;]&gt;input:nth-child(5)</stringProp>
+              <stringProp name="HtmlExtractor.attribute">value</stringProp>
+              <stringProp name="HtmlExtractor.default"></stringProp>
+              <boolProp name="HtmlExtractor.default_empty_value">false</boolProp>
+              <stringProp name="HtmlExtractor.match_number">1</stringProp>
+              <stringProp name="HtmlExtractor.extractor_impl"></stringProp>
+            </HtmlExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor: listChallengerOrders" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">listChallengerOrders</stringProp>
+              <stringProp name="RegexExtractor.regex">&lt;input id=&quot;challenger_order_.*&quot; name=&quot;(.*)&quot; type=&quot;hidden&quot; .*\/&gt;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number">-1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor: set challengerOrders" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">// Only for logging
+def listChallengerOrdersSize = vars.get(&apos;listChallengerOrders_matchNr&apos;) as Integer
+log.info(&quot;listChallengerOrdersSize: &quot; + listChallengerOrdersSize)
+
+def arrayChallengerOrders = []
+for(int i=1; listChallengerOrdersSize &gt;= i; i++) {
+	arrayChallengerOrders.add(vars.get(&apos;listChallengerOrders_&apos; + i + &apos;_g1&apos;))
+}
+
+log.info(&quot;arrayChallengerOrders as List : &quot; + arrayChallengerOrders)
+vars.put(&quot;challengerOrder1&quot;, arrayChallengerOrders[0])
+vars.put(&quot;challengerOrder2&quot;, arrayChallengerOrders[1])
+vars.put(&quot;challengerOrder3&quot;, arrayChallengerOrders[2])
+vars.put(&quot;challengerOrder4&quot;, arrayChallengerOrders[3])
+vars.put(&quot;challengerOrder5&quot;, arrayChallengerOrders[4])
+vars.put(&quot;challengerOrder6&quot;, arrayChallengerOrders[5])
+vars.put(&quot;challengerOrder7&quot;, arrayChallengerOrders[6])
+vars.put(&quot;challengerOrder8&quot;, arrayChallengerOrders[7])
+vars.put(&quot;challengerOrder9&quot;, arrayChallengerOrders[8])
+vars.put(&quot;challengerOrder10&quot;, arrayChallengerOrders[9])
+
+// Only for logging
+log.info(&quot;challengerOrder1: &quot; + vars.get(&apos;challengerOrder1&apos;))
+log.info(&quot;challengerOrder2: &quot; + vars.get(&apos;challengerOrder2&apos;))
+log.info(&quot;challengerOrder3: &quot; + vars.get(&apos;challengerOrder3&apos;))
+log.info(&quot;challengerOrder3: &quot; + vars.get(&apos;challengerOrder3&apos;))
+log.info(&quot;challengerOrder4: &quot; + vars.get(&apos;challengerOrder4&apos;))
+log.info(&quot;challengerOrder5: &quot; + vars.get(&apos;challengerOrder5&apos;))
+log.info(&quot;challengerOrder6: &quot; + vars.get(&apos;challengerOrder6&apos;))
+log.info(&quot;challengerOrder7: &quot; + vars.get(&apos;challengerOrder7&apos;))
+log.info(&quot;challengerOrder8: &quot; + vars.get(&apos;challengerOrder8&apos;))
+log.info(&quot;challengerOrder9: &quot; + vars.get(&apos;challengerOrder9&apos;))
+log.info(&quot;challengerOrder10: &quot; + vars.get(&apos;challengerOrder10&apos;))</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
           </hashTree>
         </hashTree>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Click Next" enabled="true">
@@ -772,73 +947,73 @@ vars.put(&quot;ordersValue&quot;, orderValue)</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
-                <elementProp name="challenger[order_3]" elementType="HTTPArgument">
+                <elementProp name="${challengerOrder1}" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">challenger[order_3]</stringProp>
-                  <stringProp name="Argument.value">1681836133</stringProp>
+                  <stringProp name="Argument.name">${challengerOrder1}</stringProp>
+                  <stringProp name="Argument.value">${challengerOrderId}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
-                <elementProp name="challenger[order_7]" elementType="HTTPArgument">
+                <elementProp name="${challengerOrder2}" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">challenger[order_7]</stringProp>
-                  <stringProp name="Argument.value">1681836133</stringProp>
+                  <stringProp name="Argument.name">${challengerOrder2}</stringProp>
+                  <stringProp name="Argument.value">${challengerOrderId}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
-                <elementProp name="challenger[order_3]" elementType="HTTPArgument">
+                <elementProp name="${challengerOrder3}" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">challenger[order_3]</stringProp>
-                  <stringProp name="Argument.value">1681836133</stringProp>
+                  <stringProp name="Argument.name">${challengerOrder3}</stringProp>
+                  <stringProp name="Argument.value">${challengerOrderId}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
-                <elementProp name="challenger[order_11]" elementType="HTTPArgument">
+                <elementProp name="${challengerOrder4}" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">challenger[order_11]</stringProp>
-                  <stringProp name="Argument.value">1681836133</stringProp>
+                  <stringProp name="Argument.name">${challengerOrder4}</stringProp>
+                  <stringProp name="Argument.value">${challengerOrderId}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
-                <elementProp name="challenger[order_7]" elementType="HTTPArgument">
+                <elementProp name="${challengerOrder5}" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">challenger[order_7]</stringProp>
-                  <stringProp name="Argument.value">1681836133</stringProp>
+                  <stringProp name="Argument.name">${challengerOrder5}</stringProp>
+                  <stringProp name="Argument.value">${challengerOrderId}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
-                <elementProp name="challenger[order_13]" elementType="HTTPArgument">
+                <elementProp name="${challengerOrder6}" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">challenger[order_13]</stringProp>
-                  <stringProp name="Argument.value">1681836133</stringProp>
+                  <stringProp name="Argument.name">${challengerOrder6}</stringProp>
+                  <stringProp name="Argument.value">${challengerOrderId}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
-                <elementProp name="challenger[order_7]" elementType="HTTPArgument">
+                <elementProp name="${challengerOrder7}" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">challenger[order_7]</stringProp>
-                  <stringProp name="Argument.value">1681836133</stringProp>
+                  <stringProp name="Argument.name">${challengerOrder7}</stringProp>
+                  <stringProp name="Argument.value">${challengerOrderId}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
-                <elementProp name="challenger[order_14]" elementType="HTTPArgument">
+                <elementProp name="${challengerOrder8}" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">challenger[order_14]</stringProp>
-                  <stringProp name="Argument.value">1681836133</stringProp>
+                  <stringProp name="Argument.name">${challengerOrder8}</stringProp>
+                  <stringProp name="Argument.value">${challengerOrderId}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
-                <elementProp name="challenger[order_16]" elementType="HTTPArgument">
+                <elementProp name="${challengerOrder9}" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">challenger[order_16]</stringProp>
-                  <stringProp name="Argument.value">1681836133</stringProp>
+                  <stringProp name="Argument.name">${challengerOrder9}</stringProp>
+                  <stringProp name="Argument.value">${challengerOrderId}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
-                <elementProp name="challenger[order_13]" elementType="HTTPArgument">
+                <elementProp name="${challengerOrder10}" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">challenger[order_13]</stringProp>
-                  <stringProp name="Argument.value">1681836133</stringProp>
+                  <stringProp name="Argument.name">${challengerOrder10}</stringProp>
+                  <stringProp name="Argument.value">${challengerOrderId}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
@@ -867,12 +1042,17 @@ vars.put(&quot;ordersValue&quot;, orderValue)</stringProp>
             <stringProp name="TestPlan.comments">Detected the start of a redirect chain</stringProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor: print stepId4" enabled="true">
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor: print stepId4 and challengerOrderId" enabled="true">
               <stringProp name="cacheKey">true</stringProp>
               <stringProp name="filename"></stringProp>
               <stringProp name="parameters"></stringProp>
-              <stringProp name="script">def stepId = vars.get(&quot;stepId4&quot;)
-log.info(&quot;Current stepId_4:&quot; + stepId)</stringProp>
+              <stringProp name="script">// Only for logging
+def stepId = vars.get(&quot;stepId4&quot;)
+log.info(&quot;Current stepId_4: &quot; + stepId)
+
+// Only for logging
+def challengerOrderId = vars.get(&quot;challengerOrderId&quot;)
+log.info(&quot;challengerOrderId: &quot; + challengerOrderId)</stringProp>
               <stringProp name="scriptLanguage">groovy</stringProp>
             </JSR223PreProcessor>
             <hashTree/>
@@ -1065,15 +1245,11 @@ log.info(&quot;Current stepId_4:&quot; + stepId)</stringProp>
               </collectionProp>
             </HeaderManager>
             <hashTree/>
-            <HtmlExtractor guiclass="HtmlExtractorGui" testclass="HtmlExtractor" testname="CSS Selector Extractor: token" enabled="true">
-              <stringProp name="HtmlExtractor.refname">token</stringProp>
-              <stringProp name="HtmlExtractor.expr">span[class=&quot;token&quot;]</stringProp>
-              <stringProp name="HtmlExtractor.attribute"></stringProp>
-              <stringProp name="HtmlExtractor.default">ERROR</stringProp>
-              <boolProp name="HtmlExtractor.default_empty_value">false</boolProp>
-              <stringProp name="HtmlExtractor.match_number">0</stringProp>
-              <stringProp name="HtmlExtractor.extractor_impl"></stringProp>
-            </HtmlExtractor>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor: tokenCode" enabled="true">
+              <stringProp name="JSONPostProcessor.referenceNames">tokenCode</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">code</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            </JSONPostProcessor>
             <hashTree/>
           </hashTree>
         </hashTree>
@@ -1116,7 +1292,7 @@ log.info(&quot;Current stepId_4:&quot; + stepId)</stringProp>
                 <elementProp name="challenger[one_time_token]" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">challenger[one_time_token]</stringProp>
-                  <stringProp name="Argument.value">${token}</stringProp>
+                  <stringProp name="Argument.value">${tokenCode}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
@@ -1148,8 +1324,12 @@ log.info(&quot;Current stepId_4:&quot; + stepId)</stringProp>
               <stringProp name="cacheKey">true</stringProp>
               <stringProp name="filename"></stringProp>
               <stringProp name="parameters"></stringProp>
-              <stringProp name="script">def stepId = vars.get(&quot;stepId5&quot;)
-log.info(&quot;Current stepId_5:&quot; + stepId)</stringProp>
+              <stringProp name="script">// Only for logging
+def stepId = vars.get(&quot;stepId5&quot;)
+log.info(&quot;Current stepId_5: &quot; + stepId)
+
+def tokenCode = vars.get(&quot;tokenCode&quot;)
+log.info(&quot;tokenCode: &quot; + tokenCode)</stringProp>
               <stringProp name="scriptLanguage">groovy</stringProp>
             </JSR223PreProcessor>
             <hashTree/>
