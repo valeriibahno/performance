@@ -550,16 +550,6 @@ vars.put(&quot;maxOrder&quot;, listOrders.max() as String)</stringProp>
               <stringProp name="scriptLanguage">groovy</stringProp>
             </JSR223PostProcessor>
             <hashTree/>
-            <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="XPath Extractor: maxOrderValue2" enabled="false">
-              <stringProp name="XPathExtractor.default"></stringProp>
-              <stringProp name="XPathExtractor.refname">maxOrderValue2</stringProp>
-              <stringProp name="XPathExtractor.matchNumber">-1</stringProp>
-              <stringProp name="XPathExtractor.xpathQuery">//input[@name=&quot;challenger[order_selected]&quot;]/following-sibling::label[text()=${maxOrder}]</stringProp>
-              <boolProp name="XPathExtractor.validate">false</boolProp>
-              <boolProp name="XPathExtractor.tolerant">true</boolProp>
-              <boolProp name="XPathExtractor.namespace">false</boolProp>
-            </XPathExtractor>
-            <hashTree/>
             <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RegExp Extr: maxOrderValue" enabled="true">
               <stringProp name="RegexExtractor.useHeaders">false</stringProp>
               <stringProp name="RegexExtractor.refname">maxOrderValue</stringProp>
@@ -651,74 +641,13 @@ vars.put(&quot;maxOrder&quot;, listOrders.max() as String)</stringProp>
               <stringProp name="filename"></stringProp>
               <stringProp name="parameters"></stringProp>
               <stringProp name="script">//// Only for logging
-//def allOrdersArray = vars.get(&quot;allOrdersArray&quot;)
-//log.info(&quot;allOrdersArray: &quot; + allOrdersArray)
-
-
-//def allOrdersArraySize = vars.get(&quot;allOrdersArray_matchNr&quot;)
-//log.info(&quot;allOrdersArraySize: &quot; + allOrdersArraySize)
-//
-//// Get max of orders
-//def listOrders = []
-//for(int i=1; allOrdersArraySize &gt;= i; i++) {
-//	listOrders.add(vars.get(&apos;allOrdersArray_&apos; + i + &apos;_g1&apos;) as Integer)
-//}
-//log.info(&quot;listOrders - max: &quot; + listOrders.max())
-//vars.put(&quot;maxOrder&quot;, listOrders.max() as String)
-
-//def maxOrderValue2 = vars.get(&quot;maxOrderValue2&quot;)
-//log.info(&quot;maxOrderValue2: &quot; + maxOrderValue2)
-
-
-
 def maxOrderValue = vars.get(&quot;maxOrderValue&quot;)
 log.info(&quot;maxOrderValue: &quot; + maxOrderValue)
 vars.put(&quot;maxOrderValue&quot;, maxOrderValue as String)
 
-//def listInt = []
-//for(String s : allOrdersArray)
-//	listInt.add(Integer.valueOf(s))
-//log.info(&quot;listInt orders: &quot; + listInt)
-
-//// Get max of orders
-//def maxOrder = listOrders.max()
-//log.info(&quot;max order: &quot; + maxOrder)
-////vars.put(&quot;orders&quot;, maxOrder)
-
-
-//// Only for logging - listOrderValue
-//def listOrderValue = vars.get(&quot;listOrderValue&quot;)
-//log.info(&quot;listOrderValue: &quot; + listOrderValue)
-
 // Only for logging
 def stepId = vars.get(&quot;stepId3&quot;)
-log.info(&quot;Current stepId_3: &quot; + stepId)
-
-//// Get list of orders
-//def orders = vars.get(&quot;orders&quot;)
-//log.info(&quot;list orders: &quot; + orders)
-//
-//def listInt = []
-//for(String s : listOrders)
-//	listInt.add(Integer.valueOf(s))
-//log.info(&quot;List: &quot; + listInt)
-//
-//// Get max of orders
-//def maxOrder = listInt.max()
-//log.info(&quot;max order: &quot; + maxOrder)
-////vars.put(&quot;orders&quot;, maxOrder)		// prev
-
-//vars.put(&quot;orders&quot;, listOrders)
-//vars.put(&quot;orders&quot;, allOrdersArray)
-
-// Get list of order_values and find order_value for max order
-//def listOrdersValue = vars.get(&quot;ordersValue&quot;)
-//log.info(&quot;listOrdersValue: &quot; + listOrdersValue)
-//def orderValue = listOrdersValue.find { it == maxOrder }
-//log.info(&quot;Orders value: &quot; + orderValue)
-//vars.put(&quot;ordersValue&quot;, orderValue)
-
-//vars.put(&quot;ordersValue&quot;, listOrdersValue)</stringProp>
+log.info(&quot;Current stepId_3: &quot; + stepId)</stringProp>
               <stringProp name="scriptLanguage">groovy</stringProp>
             </JSR223PreProcessor>
             <hashTree/>
